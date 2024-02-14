@@ -1,0 +1,49 @@
+@media screen and (max-width: 768px) {
+    .container{
+        width: 180px;
+        height: 140px;
+    }
+
+    .paper{
+        width: 80%;
+    }
+
+    .paper span{
+        display: none;
+    }
+
+
+    .card .open{
+        width: 0;
+        border-top: 90px solid var(--clpink);
+        border-left: 145px solid transparent;
+        border-right: 145px solid transparent;
+        border-bottom: 50px solid transparent;
+        position: relative;
+        top: 0;
+        transform-origin:0 0;
+        transition: 0.8s all ease-in-out;
+    }
+
+    .border2{
+        width: 0;
+        border-top: 90px solid transparent;
+        border-left: 145px solid var(--mpink);
+        border-right: 145px solid transparent;
+        border-bottom: 50px solid var(--mpink);
+        position: absolute;
+    }
+    
+    .border3{
+        width: 0;
+        border-top: 90px solid transparent;
+        border-left: 145px solid transparent;
+        border-right: 145px solid var(--mpink);
+        border-bottom: 50px solid var(--mpink);
+        position: absolute;
+    }
+
+    .btn{
+        margin: 20px 20px;
+    }
+}

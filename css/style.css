@@ -1,0 +1,214 @@
+:root{
+    --clpink: #ffc2d1;
+    --mpink: #ffb3c6;
+    --ospink: #ff8fab;
+}
+
+@font-face {
+    font-family: valentin1;
+    src: url(../assets/font/VALENTIN.TTF);
+}
+
+@font-face {
+    font-family: valentin2;
+    src: url(../assets/font/Angelia\ Beauty.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, .container, .card, .btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #faf5f5;
+}
+
+.container{
+    width: 30%;
+    height: 200px;
+    flex-direction: column;
+}
+
+.card{
+    width: 100%;
+    height: inherit;
+    background-color: #ffd8d8;
+    position: relative;
+}
+
+.paper{
+    width: 80%;
+    height: inherit;
+    background-color: #fff;
+    position: absolute;
+    transition: .2s all ease-in;
+    cursor: pointer;
+    text-align: center;
+}
+
+.paper h4{
+    font-family: valentin2;
+    font-size: 25px;
+    margin: 10px 0 0px 0 ;
+    letter-spacing: 1px;
+    /* position: absolute; */
+    left: 15%;
+    color: #af0c0c;
+}
+
+.paper h5{
+    font-family: valentin1;
+    font-size: 20px;
+    margin: 0px 0 5px 0 ;
+    letter-spacing: 1px;
+    /* position: absolute; */
+    left: 15%;
+}
+
+.paper span:nth-child(3){
+    position: inherit;
+    width: 30%;
+    height: 10px;
+    background-color: #ffdddd;
+    margin: 20px;
+    left: 0;
+}
+
+.paper span:nth-child(3)::before{
+    content: '';
+    position: inherit;
+    width: 150%;
+    height: 10px;
+    background-color: #ffdddd;
+    margin: 20px;
+    left: -20px;
+}
+
+.paper span:nth-child(3)::after{
+    content: '';
+    position: inherit;
+    width: 200%;
+    height: 10px;
+    background-color: #ffdddd;
+    margin: 40px 30px;
+    left: -30px;
+}
+
+.paper span:nth-child(4){
+    position: inherit;
+    width: 50%;
+    height: 10px;
+    background-color: #ffdddd;
+    margin: 80px 20px;
+    left: 0;
+}
+
+.paper span:nth-child(4)::before{
+    content: '';
+    position: inherit;
+    width: 50%;
+    height: 10px;
+    background-color: #ffdddd;
+    margin: 20px 0px;
+    left: 0;
+}
+
+.paper span:nth-child(4)::after{
+    content: '';
+    position: inherit;
+    width: 180%;
+    height: 10px;
+    background-color: #ffdddd;
+    margin: 40px 0px;
+    left: 0;
+}
+
+.card .open{
+    width: 0;
+    border-top: 150px solid var(--clpink);
+    border-left: 205px solid transparent;
+    border-right: 205px solid transparent;
+    border-bottom: 50px solid transparent;
+    position: relative;
+    top: 0;
+    transform-origin:0 0;
+    transition: 0.8s all ease-in-out;
+}
+
+.border2{
+    width: 0;
+    border-top: 150px solid transparent;
+    border-left: 205px solid var(--mpink);
+    border-right: 205px solid transparent;
+    border-bottom: 50px solid var(--mpink);
+    position: absolute;
+}
+
+.border3{
+    width: 0;
+    border-top: 150px solid transparent;
+    border-left: 205px solid transparent;
+    border-right: 205px solid var(--mpink);
+    border-bottom: 50px solid var(--mpink);
+    position: absolute;
+}
+
+
+.btn-container{
+    margin: 10px;
+}
+
+.btn{
+    padding: 10px 35px;
+    border: 5px solid var(--ospink);
+    background-color: transparent;
+    margin: 0 10px;
+    font-size: 15px;
+    font-family: sans-serif;
+    color: var(--ospink);
+    transition: .2s all ease-in-out;
+}
+
+.btn:hover{
+    background-color: var(--ospink);
+    color: #fff;
+}
+
+.paper img{
+    position: absolute;
+    z-index: 2;
+    animation: animationUp 2.5s ease-in;
+}
+
+.paper > img:nth-child(5){
+    width: 80px;
+    left: 0; 
+    bottom: 0;
+}
+
+.paper > img:nth-child(6){
+    width: 70px;
+    bottom: 0;
+    right: 20px;
+}
+
+.paper > img:nth-child(7){
+    width: 60px;
+    bottom: 10px;
+    right: 100px;
+}
+
+@keyframes animationUp {
+    0%{
+        transform: translateY(0px);
+    }
+
+    100%{
+        transform: translateY(-300px);
+    }
+}
